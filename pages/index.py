@@ -16,17 +16,15 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Your Value Proposition
+            ## Determine the risk of Mortality for Your Patient
 
-            Emphasize how the app will benefit users. Don't emphasize the underlying technology.
-
-            ✅ RUN is a running app that adapts to your fitness levels and designs personalized workouts to help you improve your running.
-
-            ❌ RUN is the only intelligent running app that uses sophisticated deep neural net machine learning to make your run smarter because we believe in ML driven workouts.
+            Using basic diagnostic information gathered early in the treatment process, determine the rick of mortality for your particular patient.
+            
+            Having an accurate prediction of risk will allow you to you to prioritize higher risk patient in terms of both the hospital's resources as well as your own. 
 
             """
         ),
-        dcc.Link(dbc.Button('Your Call To Action', color='primary'), href='/predictions')
+        dcc.Link(dbc.Button('Prioritze', color='primary'), href='/predictions')
     ],
     md=4,
 )
