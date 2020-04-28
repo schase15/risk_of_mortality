@@ -17,7 +17,7 @@ column1 = dbc.Col(
         
             ## Predictions
 
-            Your instructions: How to use your app to get new predictions.
+            Your instructions: Make predicitons.
 
             """
         ),
