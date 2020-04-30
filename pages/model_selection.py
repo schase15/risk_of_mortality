@@ -13,13 +13,15 @@ column1 = dbc.Col(
         
             ## Model Selection
 
-            Having defined my target and evaluation metrics, I then set out to explore different types of models to determine which would return the highest evaluation metrics. As this is a classification problem, I chose to explore Random Forest, XGBoost and Support Vector Machine. Additionally, I explored two linear classification models, Logistic Regression and Linear Support Vector Machine. Through experimentation I determined that Random Forest gave me the best results.. For more details on the results of my various models, please view the “Evaluation metrics/ model scores” page. 
+            Having defined my target and evaluation metrics, I then set out to explore different types of models to determine which would return the highest evaluation metrics. As this is a classification problem, I chose to explore Random Forest, XGBoost and Support Vector Machine. Additionally, I explored two linear classification models, Logistic Regression and Linear Support Vector Machine. Through experimentation I determined that Random Forest gave me the best results.
+            
+            For more details on the results of my various models, please view the “Model Scores” page. 
 
 
             """
         ),
     ],
-    md=4,
+    # md=4,
 )
 
 layout = dbc.Row([column1])
