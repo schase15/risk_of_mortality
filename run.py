@@ -16,16 +16,16 @@ navbar = dbc.NavbarSimple(
     children=[
         dbc.NavItem(dcc.Link('Predictions', href='/predictions', className='nav-link')), 
         dbc.NavItem(dcc.Link('Target', href='/target', className='nav-link')), 
-        dbc.NavItem(dcc.Link('Metrics', href='/metrics', className='nav-link')),
+        dbc.NavItem(dcc.Link('Evaluation Metrics', href='/metrics', className='nav-link')),
         dbc.NavItem(dcc.Link('Model Selection', href='/model_selection', className='nav-link')),
-        dbc.NavItem(dcc.Link('Evaluation Metrics/ Model Scores', href='/evaluation_scores', className='nav-link')),
+        dbc.NavItem(dcc.Link('Model Scores', href='/evaluation_scores', className='nav-link')),
         dbc.NavItem(dcc.Link('Feature Selection', href='/feature_selection', className='nav-link')),
         dbc.NavItem(dcc.Link('Insights', href='/insights', className='nav-link')), 
     ],
     sticky='top',
     color='light', 
-    light=True, 
-    dark=False
+    light=False, 
+    dark=True
 )
 
 # Footer docs:

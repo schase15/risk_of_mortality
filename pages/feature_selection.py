@@ -17,17 +17,6 @@ column1 = dbc.Col(
 
             After cleaning the remaining data, I ran a model and viewed the permutation importances. In short, permutation importances tell you the weight that a specific feature has on the effectiveness of the model. Features with higher weights are more helpful in making accurate predictions, while those with lower weights are less effective. They can even have negative weights, meaning they are hurting the predictive capabilities of the model. I used the permutation importances below to determine which features to include in my final model. 
 
-            In conclusion, I decided to use only the following 7 features; 
-    'Age Group',
-    'Type of Admission',
-    'APR DRG Code',
-    'CCS Procedure Code',
-    'APR Medical Surgical Description',
-    'Payment Typology 1',
-    'Emergency Department Indicator',
-
-
-
             """
         ),
         html.Div(
@@ -38,6 +27,26 @@ column1 = dbc.Col(
     md=4,
 )
 
-column2 = dbc.Col([])
+column2 = dbc.Col(
+    [
+        dcc.Markdown(
+            """
+            In conclusion, I decided to use only the following 7 features; 
+                    'Age Group',
+                    'Type of Admission',
+                    'APR DRG Code',
+                    'CCS Procedure Code',
+                    'APR Medical Surgical Description',
+                    'Payment Typology 1',
+                    'Emergency Department Indicator'
+
+            """
+        ),
+        html.Div(
+            html.Img(src='assets/all_permutations.png', className='img-fluid', width=800), 
+            style={'textAlign': 'center'}
+        )
+    ]
+)
 
 layout = dbc.Row([column1, column2])
