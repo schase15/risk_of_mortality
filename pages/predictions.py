@@ -137,11 +137,39 @@ column1 = dbc.Col(
             className='mb-4'
         ),
 
+        dcc.Markdown(
+            """
+            ##### Patient Diagnosis:
+            Use the reference table to get the appropriate APR DRG Code
+            """
+        ),
+
+        dcc.Input(
+            id='diagnosis',
+            placeholder='Enter a numeric APR DRG Code...',
+            type='number',
+            value='',
+            className='mb-4'
+        ),
+
+        dcc.Markdown(
+            """
+            ##### Patient Procedure:
+            Use the reference table to get the appropriate CCS Procedure Code
+            """
+        ),
+
+        dcc.Input(
+            id='procedure',
+            placeholder='Enter a numeric CCS Procedure Code...',
+            type='number',
+            value='',
+            className='mb-4'
+        )
 
     ],
     md=4,
 )
-
 
 column2 = dbc.Col(
     [
@@ -151,38 +179,46 @@ column2 = dbc.Col(
             """
         ),
 
-        # html.Div(
-        #     id='prediction-content',
-        # )
+        html.Div(
+            id='prediction-content',
+        )
     ]
 )
 
 
 
-# @app.callback(
-#     Output('prediction-content', 'children'),
-#     [Input('age', 'value'),
-#     Input('admission', 'value'),
-#     Input('diagnosis', 'value'),
-#     Input('procedure', 'value'),
-#     Input('surgical', 'value'),
-#     Input('payment', 'value'),
-#     Input('emergency_room', 'value')
-# )
+@app.callback(
+    Output('prediction-content', 'children'),
+    [Input('age', 'value'),
+    Input('admission', 'value'),
+    Input('diagnosis', 'value'),
+    Input('procedure', 'value'),
+    Input('surgical', 'value'),
+    Input('payment', 'value'),
+    Input('emergency_room', 'value')]
+)
 
-# def predict(age, admission, diagnosis, procedure, surgical, payment, emergency_room):
-#     df = pd.DataFrame(
-#         columns=['Age Group',
-#                 'Type of Admission',
-#                 'APR DRG Code',
-#                 'CCS Prodecure Code', 
-#                 'APR Medical Surgical Description',
-#                 'Payment Typology 1',
-#                 'Emergency Department Indicator'],
-#         data=[[age, admission, diagnosis, procedure, surgical, payment, emergency_room]]
-#     )
-#     y_pred=pipeline.predict(df)[0]
-#     return y_pred
+def predict(age, admission, diagnosis, procedure, surgical, payment, emergency_room):
+    df = pd.DataFrame(
+        columns=['Age Group',
+                'Type of Admission',
+                'APR DRG Code',
+                'CCS Prodecure Code', 
+                'APR Medical Surgical Description',
+                'Payment Typology 1',
+                'Emergency Department Indicator'],
+        data=[[age, admission, diagnosis, procedure, surgical, payment, emergency_room]]
+    )
+    y_pred=pipeline.predict(df)[0]
+    if (y_pred == 1):
+        return 'Minor'
+    elif (y_pred == 2):
+        return 'Moderate'
+    elif (y_pred == 3):
+        return 'Major'
+    else:
+        return 'Extreme'
+
 
 
 
