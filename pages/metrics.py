@@ -37,7 +37,7 @@ column2 = dbc.Col(
             """ 
         ), 
         html.Div(
-            html.Img(scr='assets/confusion_matrix.png', className='img-fluid')
+            html.Img(src='assets/confusion_matrix.png', className='img-fluid')
         )      
     ]
 )

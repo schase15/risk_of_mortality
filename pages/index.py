@@ -20,7 +20,7 @@ column1 = dbc.Col(
 
             Using basic diagnostic information gathered early in the treatment process, determine the risk of mortality for your particular patient.
             
-            Having an accurate prediction of risk will allow you to prioritize higher risk patient in terms of both the hospital's resources as well as your own. 
+            Having an accurate prediction of risk will allow you to prioritize higher risk patient and allocate hospital resources more effectively. 
 
             """
         ),
@@ -29,13 +29,11 @@ column1 = dbc.Col(
     md=4,
 )
 
-gapminder = px.data.gapminder()
-fig = px.scatter(gapminder.query("year==2007"), x="gdpPercap", y="lifeExp", size="pop", color="continent",
-           hover_name="country", log_x=True, size_max=60)
-
 column2 = dbc.Col(
     [
-        dcc.Graph(figure=fig),
+        html.Div(
+            html.Img(src='assets/hospital-room.png', className= 'img-fluid')
+        )
     ]
 )
 

@@ -11,7 +11,7 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Evaluation metrics/ model scores:
+            ## Model scores:
 
             After cleaning my data and selecting my features (for more on feature selection please see the “Feature Selection” page) I split my data into training, validation and test datasets. I started by running a baseline model to determine the null accuracy and f1 score. That is, the evaluation scores if we were to guess that every patient had a classification of minor risk of mortality (the most frequent target class). 
 
@@ -29,36 +29,35 @@ column2 = dbc.Col(
         dcc.Markdown(
             """
 
-            Scores from models run on validation data
-
             Baseline:
-                Accuracy:                       0.57               
-                Weighted Average f1 score:      0.41
+                <br> Accuracy:                       0.57               
+                <br> Weighted Average f1 score:      0.41
 
             Logistic Regression:
-                Accuracy:                       0.60
-                Weighted Average f1 score:      0.55
+                <br> Accuracy:                       0.60
+                <br> Weighted Average f1 score:      0.55
 
             Linear Support Vector Machine:
-                Accuracy:                       0.57
-                Weighted Average f1 score:      0.49
+                <br> Accuracy:                       0.57
+                <br> Weighted Average f1 score:      0.49
 
             Support Vector Classification:
-                Accuracy:                       0.64
-                Weighted Average f1 score:      0.60
+                <br> Accuracy:                       0.64
+                <br> Weighted Average f1 score:      0.60
 
             XGBoost:
-                Accuracy:                       0.66
-                Weighted Average f1 score:      0.62
+                <br> Accuracy:                       0.66
+                <br> Weighted Average f1 score:      0.62
 
             Random Forest:
-                Accuracy:                       0.69 
-                Weighted Average f1 score:      0.68
+                <br> Accuracy:                       0.69 
+                <br> Weighted Average f1 score:      0.68
 
 
 
             Final test data:
-            As Random Forest gave me the best validation scores, I used that to predict my test data. The final resulting scores are below
+            <br> As Random Forest gave me the best validation scores, I used that to predict my test data.
+            <br> The final resulting scores are below:
 
             """
         ),
