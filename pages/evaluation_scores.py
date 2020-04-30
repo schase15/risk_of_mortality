@@ -61,6 +61,9 @@ column2 = dbc.Col(
             As Random Forest gave me the best validation scores, I used that to predict my test data. The final resulting scores are below
 
             """
+        ),
+        html.Div(
+            html.Img(src='assets/test_score.png', className='img-fluid')
         )
 
     ]
