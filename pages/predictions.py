@@ -9,8 +9,8 @@ from dash.dependencies import Input, Output
 from app import app
 
 # Load pipeline
-from joblib import load
-pipeline = load('assets/pipeline.joblib')
+# from joblib import load
+# pipeline = load('assets/pipeline.joblib')
 
 # 2 column layout. 1st column width = 4/12
 # https://dash-bootstrap-components.opensource.faculty.ai/l/components/layout
