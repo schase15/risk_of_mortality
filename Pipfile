@@ -7,7 +7,7 @@ verify_ssl = true
 pylint = "*"
 
 [packages]
-dash = "*"
+dash = "==1.9.1"
 dash-bootstrap-components = "*"
 gunicorn = "*"
 plotly = "*"
