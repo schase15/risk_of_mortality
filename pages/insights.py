@@ -17,6 +17,8 @@ column1 = dbc.Col(
         
             ## Insights
 
+            Add text and graphs for insights.
+
 
             """
         ),

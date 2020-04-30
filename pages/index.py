@@ -16,15 +16,15 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Determine the risk of Mortality for Your Patient
+            ## Determine the Risk of Mortality for Your Patient
 
-            Using basic diagnostic information gathered early in the treatment process, determine the rick of mortality for your particular patient.
+            Using basic diagnostic information gathered early in the treatment process, determine the risk of mortality for your particular patient.
             
-            Having an accurate prediction of risk will allow you to you to prioritize higher risk patient in terms of both the hospital's resources as well as your own. 
+            Having an accurate prediction of risk will allow you to prioritize higher risk patient in terms of both the hospital's resources as well as your own. 
 
             """
         ),
-        dcc.Link(dbc.Button('Prioritze', color='primary'), href='/predictions')
+        dcc.Link(dbc.Button('Predict Risk', color='primary'), href='/predictions')
     ],
     md=4,
 )
