@@ -140,8 +140,14 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
             ##### Patient Diagnosis:
-            Use the reference table to get the appropriate APR DRG Code
             """
+        ),
+        dcc.Link(
+            'Click to access reference codes', 
+            href='/reference_tables', 
+            className='nav-link',
+            # target='_blank',
+            style= {'color': 'blue'}
         ),
 
         dcc.Input(
@@ -155,8 +161,15 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
             ##### Patient Procedure:
-            Use the reference table to get the appropriate CCS Procedure Code
             """
+        ),
+
+        dcc.Link(
+            'Click to access reference codes', 
+            href='/reference_tables', 
+            className='nav-link',
+            # target='_blank',
+            style= {'color': 'blue'}
         ),
 
         dcc.Input(
@@ -165,26 +178,26 @@ column1 = dbc.Col(
             type='number',
             value='',
             className='mb-4'
-        )
+        ),
 
-    ],
-    md=4,
-)
-
-column2 = dbc.Col(
-    [
         dcc.Markdown(
             """
             ### The Risk of Mortality for Your Patient is:
+
             """
         ),
 
         html.Div(
-            id='prediction-content',
-        )
-    ]
-)
+            id= 'prediction-content',
+            style= {
+                'textAlign': 'center',
+                'color': 'red',
+                'fontSize': 72
+            }
+        )        
 
+    ],
+)
 
 
 @app.callback(
@@ -223,4 +236,4 @@ def predict(age, admission, diagnosis, procedure, surgical, payment, emergency_r
 
 
 
-layout = dbc.Row([column1, column2])
+layout = dbc.Row([column1])
