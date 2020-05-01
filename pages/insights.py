@@ -56,7 +56,7 @@ column1 = dbc.Col(
 
             Finally, we can look at how each feature effected our final prediction for an individual in our test data. 
 
-            Take a random patient from our test data:
+            **Take a random patient from our test data:**
             """
         ),
 
@@ -68,7 +68,7 @@ column1 = dbc.Col(
             """
             Using Shapley values, we can look at how the model predicted the probability of each class, and then selected the class with the highest probability as its prediction. The red arrows are the features that push the probability higher, and the blue classes push the probability lower. The length of the colored bar is the amount of impact the feature had on the probability. 
 
-            Shapley values for Minor Risk of Mortality:
+            __Shapley values for Minor Risk of Mortality:__
             """
         ),
 
@@ -78,7 +78,7 @@ column1 = dbc.Col(
 
         dcc.Markdown(
             """
-            Shapley values for Moderate Risk of Mortality: 
+            __Shapley values for Moderate Risk of Mortality:__ 
             """
         ),
 
@@ -88,7 +88,7 @@ column1 = dbc.Col(
 
         dcc.Markdown(
             """
-            Shapley values for Major Risk of Mortality: 
+            __Shapley values for Major Risk of Mortality:__ 
             """
         ),
 
@@ -98,7 +98,7 @@ column1 = dbc.Col(
 
         dcc.Markdown(
             """
-            Shapley values for Extreme Risk of Mortality: 
+            __Shapley values for Extreme Risk of Mortality:__
             """
         ),
 

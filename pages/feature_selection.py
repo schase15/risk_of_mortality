@@ -40,7 +40,7 @@ column2 = dbc.Col(
         
         dcc.Markdown(
             """
-            In conclusion, I decided to use only the following 7 features:
+            **In conclusion**, I decided to use the following 7 features:
 
                     * Age Group
                     * Type of Admission

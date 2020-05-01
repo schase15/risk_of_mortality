@@ -143,7 +143,7 @@ column1 = dbc.Col(
             """
         ),
         dcc.Link(
-            'Click to access reference codes', 
+            'Click to access APR DRG reference codes', 
             href='/reference_tables', 
             className='nav-link',
             # target='_blank',
@@ -165,7 +165,7 @@ column1 = dbc.Col(
         ),
 
         dcc.Link(
-            'Click to access reference codes', 
+            'Click to access CCS Procedure reference codes', 
             href='/reference_tables', 
             className='nav-link',
             # target='_blank',
