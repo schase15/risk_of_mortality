@@ -17,3 +17,8 @@ Risk of mortality:
 - Moderate
 - Major
 - Extreme
+
+
+Read more on the accompanying blog post: [Here](http://steventchase.com/2020-05-01-risk-of-mortality/)
+
+Visit the website: [Here](https://risk-of-mortality.herokuapp.com/)
