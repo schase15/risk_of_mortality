@@ -1,4 +1,4 @@
-### Dash web application that predicts a patients risk of mortality based on diagnosis and other metrics available at patient intake.
+### Dash web application that predicts a patient's risk of mortality based on diagnosis and other metrics available at patient intake.
 
 
 **Input**:
