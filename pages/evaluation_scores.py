@@ -13,10 +13,12 @@ column1 = dbc.Col(
         
             ## Model scores:
 
-            After cleaning my data and selecting my features (for more on feature selection please see the “Feature Selection” page) I split my data into training, validation and test datasets. I started by running a baseline model to determine the null accuracy and f1 score. That is, the evaluation scores if we were to guess that every patient had a classification of minor risk of mortality (the most frequent target class). 
+            After cleaning my data and selecting my features *(for more on feature selection please see the “Feature Selection” page)* I split my data into training, validation and test datasets. I started by running a baseline model to determine the null accuracy and f1 score. That is, the evaluation scores if we were to guess that every patient had a classification of minor risk of mortality (the most frequent target class). 
 
 
-            With a baseline score to beat, I trained several different types of models to see which type resulted in the best scores. The different models and scores are posted to the right. To see the raw code including hyperparameter tuning, please visit my GitHub repository linked below. 
+            With a baseline score to beat, I trained several different types of models to see which type resulted in the best scores. The different models and scores are posted to the right. 
+            
+            #### To see the raw code including hyperparameter tuning, please visit my GitHub repository linked below. 
 
             """
         ),
@@ -29,7 +31,7 @@ column2 = dbc.Col(
         dcc.Markdown(
             """
 
-            Baseline:
+            ### Baseline:
 
                 - Accuracy:                       0.57 
                 - Weighted Average f1 score:      0.41
@@ -67,7 +69,7 @@ column3 = dbc.Col(
     [
         dcc.Markdown(
             """
-            Final test data:
+            ### Final test data:
 
             As Random Forest gave me the best validation scores, I used that to predict my test data.
 
