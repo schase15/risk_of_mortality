@@ -146,7 +146,7 @@ column1 = dbc.Col(
             'Click to access APR DRG reference codes', 
             href='/reference_tables', 
             className='nav-link',
-            target='_blank',
+            # target='_blank',
             style= {'color': 'blue'}
         ),
 
