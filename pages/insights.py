@@ -54,9 +54,10 @@ column1 = dbc.Col(
             """
             Now let's examine the plot for 'minor risk' of mortality (upper left). We can see that if the patient is young (0 to 17) and admitted to the hospital for a medical procedure rather than surgery, they have an 80% chance of being classified as having a 'minor risk' of mortality. If they are admitted to the hospital for surgery, then the probability of being predicted as a 'minor risk' of mortality drops to 64% while it increases for the higher risk levels. Those who are in the oldest age group (70 or older) and are at the hospital for medical admittance only have a 25% chance of being categorized as a 'minor risk'. 
             From these partial dependence plots we can see that the risk increases both with age, as well as with a surgical admittance versus a medical admittance.  
+
             Finally, we can look at one individual in our test data to see how each feature effected our final prediction.
 
-            **Take a random patient from our test data:**
+            __Take a random patient from our test data:__
             """
         ),
 

@@ -22,8 +22,6 @@ column1 = dbc.Col(
 
             With a baseline score to beat, I trained the above mentioned models to see which resulted in the best evaluation scores. The different models and their respective scores are posted to the right. 
             
-            #### To see the raw code including hyperparameter tuning, please visit my GitHub repository linked below. 
-
             """
         ),
     ],
