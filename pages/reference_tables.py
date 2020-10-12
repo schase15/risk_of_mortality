@@ -5,6 +5,9 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 
+# Clean up the visual of the tables with dash_table
+# https://dash.plotly.com/datatable
+
 # Imports from this application
 from app import app
 

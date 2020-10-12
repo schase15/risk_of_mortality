@@ -142,13 +142,6 @@ column1 = dbc.Col(
             ##### Patient Diagnosis:
             """
         ),
-        dcc.Link(
-            'Click to access APR DRG reference codes', 
-            href='/reference_tables', 
-            className='nav-link',
-            # target='_blank',
-            style= {'color': 'blue'}
-        ),
 
         dcc.Input(
             id='diagnosis',
@@ -158,18 +151,17 @@ column1 = dbc.Col(
             className='mb-4'
         ),
 
+        html.A(
+            "Click to access APR DRG reference codes",
+            href='/reference_tables',
+            target="_blank",
+            style= {'color': 'blue'}
+        ), 
+
         dcc.Markdown(
             """
             ##### Patient Procedure:
             """
-        ),       
-
-        dcc.Link(
-            'Click to access CCS Procedure reference codes', 
-            href='/reference_tables', 
-            className='nav-link',
-            # target='_blank',
-            style= {'color': 'blue'}
         ),
 
         dcc.Input(
@@ -180,6 +172,12 @@ column1 = dbc.Col(
             className='mb-4'
         ),
 
+        html.A(
+            "Click to access CSS Procedure reference codes",
+            href='/reference_tables',
+            target="_blank",
+            style= {'color': 'blue'}
+        ), 
         dcc.Markdown(
             """
             ### The Risk of Mortality for Your Patient is:
@@ -194,7 +192,7 @@ column1 = dbc.Col(
                 'color': 'red',
                 'fontSize': 72
             }
-        )        
+        ),        
 
     ],
 )
