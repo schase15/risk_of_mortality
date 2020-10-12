@@ -162,20 +162,15 @@ column1 = dbc.Col(
             """
             ##### Patient Procedure:
             """
+        ),       
+
+        dcc.Link(
+            'Click to access CCS Procedure reference codes', 
+            href='/reference_tables', 
+            className='nav-link',
+            # target='_blank',
+            style= {'color': 'blue'}
         ),
-
-        html.Div([
-            html.A('Click to access CCS Procedure reference codes', href='/reference_tables', target= "_blank")
-        ]),        
-
-
-        # dcc.Link(
-        #     'Click to access CCS Procedure reference codes', 
-        #     href='/reference_tables', 
-        #     className='nav-link',
-        #     # target='_blank',
-        #     style= {'color': 'blue'}
-        # ),
 
         dcc.Input(
             id='procedure',
