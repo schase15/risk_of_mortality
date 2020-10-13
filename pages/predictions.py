@@ -15,19 +15,9 @@ import pandas as pd
 # Imports from this application
 from app import app
 
-# # Load pipeline
+# Load pipeline
 pipeline = joblib.load('assets/pipeline.joblib')
 
-# input_labels = ['Age Group', 'Type of Admission',	'APR DRG Code',	'CCS Procedure Code',	'APR Medical Surgical Description',	'Payment Typology 1',	'Emergency Department Indicator' ]
-
-# input_vals = [1, 'Emergency', 254, 0, 'Medical', 'Medicaid', 'Y']
-
-# test_input = pd.DataFrame(dict(zip(input_labels, input_vals)), index=[0])
-
-# test = pipeline.predict(test_input)
-
-
-# 2 column layout. 1st column width = 4/12
 # https://dash-bootstrap-components.opensource.faculty.ai/l/components/layout
 column1 = dbc.Col(
     [
@@ -153,7 +143,7 @@ column1 = dbc.Col(
 
         html.A(
             "Click to access APR DRG reference codes",
-            href='/reference_tables',
+            href='/diagnosis_codes',
             target="_blank",
             style= {'color': 'blue'}
         ), 
@@ -174,7 +164,7 @@ column1 = dbc.Col(
 
         html.A(
             "Click to access CSS Procedure reference codes",
-            href='/reference_tables',
+            href='/procedure_codes',
             target="_blank",
             style= {'color': 'blue'}
         ), 
@@ -197,7 +187,7 @@ column1 = dbc.Col(
     ],
 )
 
-
+# To be able to run model
 @app.callback(
     Output('prediction-content', 'children'),
     [Input('age', 'value'),
@@ -220,7 +210,11 @@ def predict(age, admission, diagnosis, procedure, surgical, payment, emergency_r
                 'Emergency Department Indicator'],
         data=[[age, admission, diagnosis, procedure, surgical, payment, emergency_room]]
     )
+
+    # Make prediction
     y_pred=pipeline.predict(df)[0]
+
+    # Return prediction
     if (y_pred == 1):
         return 'Minor'
     elif (y_pred == 2):
@@ -229,9 +223,6 @@ def predict(age, admission, diagnosis, procedure, surgical, payment, emergency_r
         return 'Major'
     else:
         return 'Extreme'
-
-
-
 
 
 layout = dbc.Row([column1])
