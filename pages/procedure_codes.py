@@ -1,4 +1,3 @@
-
 import dash
 import pandas
 import os.path
@@ -9,13 +8,14 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 import pandas as pd
 
+# Imports from this application
+from app import app
+
 # Path to dataset
 path = os.path.join(os.path.dirname(__file__), '../assets')
 procedure_codes = pd.read_csv(path + '/procedure_codes.csv')
 
-# Imports from this application
-from app import app
-
+# Page layout
 column1 = dbc.Col(
     [
         dcc.Markdown(

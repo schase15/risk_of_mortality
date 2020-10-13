@@ -4,8 +4,10 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 
+# Imports form this app
 from app import app
 
+# Page layout
 column1 = dbc.Col(
     [
         dcc.Markdown(
