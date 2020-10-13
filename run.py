@@ -7,7 +7,7 @@ from dash.dependencies import Input, Output
 
 # Imports from this application
 from app import app, server
-from pages import index, predictions, reference_tables, insights, target, evaluation_scores, metrics, model_selection, feature_selection
+from pages import index, predictions, procedure_codes, diagnosis_codes, insights, target, evaluation_scores, metrics, feature_selection
 
 # Navbar docs: https://dash-bootstrap-components.opensource.faculty.ai/l/components/navbar
 navbar = dbc.NavbarSimple(
@@ -19,8 +19,7 @@ navbar = dbc.NavbarSimple(
         dbc.NavItem(dcc.Link('Feature Selection', href='/feature_selection', className='nav-link')),
         dbc.NavItem(dcc.Link('Evaluation Metrics', href='/metrics', className='nav-link')),
         dbc.NavItem(dcc.Link('Models', href='/evaluation_scores', className='nav-link')),
-        dbc.NavItem(dcc.Link('Insights', href='/insights', className='nav-link')),
-        dbc.NavItem(dcc.Link('Reference Tables', href='/reference_tables', className='nav-link')), 
+        dbc.NavItem(dcc.Link('Insights', href='/insights', className='nav-link'))
     ],
     sticky='top',
     color='dark', 
@@ -76,16 +75,16 @@ def display_page(pathname):
         return target.layout
     elif pathname == '/metrics':
         return metrics.layout
-    elif pathname == '/model_selection':
-        return model_selection.layout
+    elif pathname == '/procedure_codes':
+        return procedure_codes.layout
     elif pathname == '/evaluation_scores':
         return evaluation_scores.layout
     elif pathname == '/feature_selection':
         return feature_selection.layout
     elif pathname == '/insights':
         return insights.layout
-    elif pathname == '/reference_tables':
-        return reference_tables.layout
+    elif pathname == '/diagnosis_codes':
+        return diagnosis_codes.layout
     else:
         return dcc.Markdown('## Page not found')
 
