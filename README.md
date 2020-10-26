@@ -18,7 +18,7 @@ Risk of Mortality:
 - Major
 - Extreme
 
-The `Build Week 2` [notebook](/notebooks/'Build Week 2.ipynb') includes the code used to create and test the final model as well as code exploring various other model types and interations.
+The `Build Week 2` [notebook](notebooks/'Build Week 2.ipynb') includes the code used to create and test the final model as well as code exploring various other model types and interations.
 
 The data used to train this model can be found on the New York State Health Department's website, [here](https://health.data.ny.gov/dataset/Hospital-Inpatient-Discharges-SPARCS-De-Identified/22g3-z7e7)
 
